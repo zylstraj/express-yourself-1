@@ -21,7 +21,7 @@ p {
 }
 
 .container {
-  width: 40em;
+  width: 60em;
   margin: 1em auto;
   overflow: hidden;
 }
@@ -30,10 +30,12 @@ p {
   margin: 1em auto;
   padding:.5em;
   background-color: #193441;
-  color:white;
+  color: white;
 }
 .navbar p a {
-  color:white;
+  color: white;
+  margin: 1em;
+  text-decoration: none;
 }
 .navbar p a:hover {
   color:gray;
@@ -41,7 +43,7 @@ p {
 
 .main-content {
   float: left;
-  width: 25em;
+  width: 75%;
 }
 .main-content p {
   margin-bottom: 1em;
@@ -49,7 +51,7 @@ p {
 
 .sidebar {
   float: left;
-  width: 15em;
+  width: 25%;
 }
 .sidebar .spotlight{
   border-radius: .25em;
@@ -69,7 +71,7 @@ p {
 }
 
 footer {
-  width: 40em;
+  width: 60em;
   margin: 3em auto;
   border-top: 1px dotted #ccc;
   padding-top: .25em;
