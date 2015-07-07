@@ -1,0 +1,23 @@
+doctype
+html
+  head
+    title #{title} Node Express Jade
+    link(rel='stylesheet', href='CSS/style.css')
+  body
+    button.reset_classes reset
+    main
+      header
+        h1 Node Site Thing Header
+      nav.navbar
+        p
+          a(href='/') Home
+          a(href='about') About
+      div.container
+        section.main-content
+          block content
+        aside.sidebar
+          block sidebar
+      footer
+        p Running on node with Express and Jade
+    script(src='https://code.jquery.com/jquery-2.1.4.min.js')
+    script(src='js/main.js')
