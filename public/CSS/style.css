@@ -31,6 +31,7 @@ p {
   padding:.5em;
   background-color: #193441;
   color: white;
+  font-family: sans-serif;
 }
 .navbar p a {
   color: white;
@@ -38,7 +39,7 @@ p {
   text-decoration: none;
 }
 .navbar p a:hover {
-  color:gray;
+  color:#3E606F; /*blue gray*/;
 }
 
 .main-content {
@@ -48,24 +49,31 @@ p {
 .main-content p {
   margin-bottom: 1em;
 }
-
+.main-content img {
+  width:60%;
+}
 .sidebar {
   float: left;
   width: 25%;
 }
+.sidebar img {
+  width:100%;
+}
+
 .sidebar .spotlight{
   border-radius: .25em;
-  border: 1px solid #ccc;
+  border: 1px solid #193441;
   margin-left: 1em;
   background-color: #D1DBBD; /*pale green*/
 }
 .sidebar .spotlight h1 {
   font-family: 'Quicksand';
+  padding-left: .5em;
   padding-bottom: .5em;
-  border-bottom: 1px dotted #ddd;
+  border-bottom: 1px dotted #193441;
   margin-bottom: .5em;
 }
-.sidebar .spotlight p{
+.sidebar .spotlight p {
   padding: 0 .5em;
   margin-bottom: .5em;
 }
