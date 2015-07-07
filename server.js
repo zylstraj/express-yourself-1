@@ -15,6 +15,12 @@ app.get('/', function(req, res){
   res.render('index');
 });
 
+// app.get('/', function (req, res) {
+//   res.render('index',
+//   { title : 'Home' }
+//   )
+// });
+
 //static services
 app.use(express.static(path.join(__dirname, 'public'))); //serve everything inside public directory
 

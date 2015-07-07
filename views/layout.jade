@@ -1,0 +1,15 @@
+doctype
+html
+  head
+    title #{title} Node Express Jade
+    link(rel='stylesheet', href='CSS/style.css')
+  body
+    header
+      h1 Header
+    .container
+      .main-content
+        block content
+      .sidebar
+        block sidebar
+    footer
+      p Running on node with Express and Jade
