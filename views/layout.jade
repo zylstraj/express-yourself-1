@@ -5,11 +5,15 @@ html
     link(rel='stylesheet', href='CSS/style.css')
   body
     header
-      h1 Header
-    .container
-      .main-content
+      h1 Node Site Thing Header
+    nav.navbar
+      p
+        a(href='/') Home
+        a(href='about') About
+    main.container
+      section.main-content
         block content
-      .sidebar
+      aside.sidebar
         block sidebar
     footer
       p Running on node with Express and Jade

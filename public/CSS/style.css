@@ -6,12 +6,15 @@ body {
   color: #193441; /*dk blue gray green*/
 }
 header {
+  width: 40em;
+  margin: 1em auto;
   font-family: 'Quicksand';
-  color:white;
+  color: white;
   background-color: #3E606F; /*blue gray*/
   padding: 2em .5em;
   font-size: 1.5em;
   text-align: center;
+
 }
 p {
   line-height: 1.8;
@@ -22,6 +25,20 @@ p {
   margin: 1em auto;
   overflow: hidden;
 }
+.navbar {
+  width: 60em;
+  margin: 1em auto;
+  padding:.5em;
+  background-color: #193441;
+  color:white;
+}
+.navbar p a {
+  color:white;
+}
+.navbar p a:hover {
+  color:gray;
+}
+
 .main-content {
   float: left;
   width: 25em;
