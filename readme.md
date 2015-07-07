@@ -2,9 +2,9 @@
 Class assignment for experimenting with node.js, express, and Jade.
 
 ###To install:
-* Requires node.js, express, and Jade
-* Retain directory structure from github. 
-	* (CSS must be in public; index.jade must be in views)
+1. Copy from github and retain directory structure.
+2. Type `npm install` in the project directory to get necessary dependencies. ()Requires node.js, express, and Jade)
+
 
 ###To run:
 1. In terminal, in project directory, type `node server`
