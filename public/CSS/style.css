@@ -4,17 +4,20 @@ body {
   font-family: 'Georgia';
   background-color: #FCFFF5; /*off white*/
   color: #193441; /*dk blue gray green*/
+  margin: 0;
+}
+main {
+  cursor: pointer;
 }
 header {
   width: 40em;
-  margin: 1em auto;
+  margin: 0 auto 1em auto;
   font-family: 'Quicksand';
   color: white;
   background-color: #3E606F; /*blue gray*/
   padding: 2em .5em;
   font-size: 1.5em;
   text-align: center;
-
 }
 p {
   line-height: 1.8;
@@ -74,4 +77,15 @@ footer {
   border-top: 1px dotted #ccc;
   padding-top: .25em;
   font-size: .7em;
+  text-align: center;
+}
+.whimsy {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  color: pink;
+  background-color: purple;
+}
+.reset_classes {
+  position: fixed;
+  top: 2em;
+  right: 1em;
 }
