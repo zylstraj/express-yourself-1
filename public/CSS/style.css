@@ -14,12 +14,10 @@ header {
   padding: 2em .5em;
   font-size: 1.5em;
   text-align: center;
-
 }
 p {
   line-height: 1.8;
 }
-
 .container {
   width: 60em;
   margin: 1em auto;
@@ -52,14 +50,14 @@ p {
 .main-content img {
   width:60%;
 }
+
 .sidebar {
   float: left;
   width: 25%;
 }
 .sidebar img {
-  width:100%;
+  width: 100%;
 }
-
 .sidebar .spotlight{
   border-radius: .25em;
   border: 1px solid #193441;
