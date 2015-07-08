@@ -24,8 +24,16 @@ app.get('/donuts/:name', function(req, res){
 app.post('/donuts', parseUrlencoded, function(req, res){
   var newDonut = req.body;
   donuts[newDonut.name] = newDonut.description;
-
+  console.log(req.body);
   res.status(201).json(newDonut);
+});
+
+app.put('/donuts/:name', function(req, res){
+  console.log("I am putting");
+});
+
+app.delete('/donuts/:name', function(req, res){
+  console.log("I am deleting");
 });
 
 //view directory setup
