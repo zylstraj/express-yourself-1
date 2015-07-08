@@ -4,17 +4,29 @@
 var express = require('express');
 var app = express(); //gets express into our main server file
 var path = require('path');
+var bodyParser = require('body-parser');
+var parseUrlencoded = bodyParser.urlencoded({ extended: false});
 var port = 3000;
 
 var donuts = {
-  'Monday': 'Jelly Donut',
-  'Tuesday': 'Lemon Poppyseed',
+  'Monday'    : 'Jelly Donut',
+  'Tuesday'   : 'Lemon Poppyseed',
   'Wednesday' : 'Bear Claw',
-  'Thursday' : 'Glazed',
-  'Friday' : 'Sprinkles',
-  'Saturday' : 'Double Donut Day',
-  'Sunday' : 'Boston Cream'
+  'Thursday'  : 'Glazed',
+  'Friday'    : 'Sprinkles',
+  'Saturday'  : 'Double Donut Day',
+  'Sunday'    : 'Boston Cream'
 };
+app.get('/donuts/:name', function(req, res){
+  var description = donuts[req.params.name];
+  res.json(description);
+});
+app.post('/donuts', parseUrlencoded, function(req, res){
+  var newDonut = req.body;
+  donuts[newDonut.name] = newDonut.description;
+
+  res.status(201).json(newDonut);
+});
 
 //view directory setup
 app.set('views', path.join(__dirname, 'views'));
@@ -26,11 +38,6 @@ app.get('/', function(req, res){
 });
 app.get('/about', function (req, res) {
   res.render('about');
-});
-
-app.get('/donuts/:name', function(req, res){
-  var today = donuts[req.params.name];
-  response.json(description);
 });
 
 //static services
