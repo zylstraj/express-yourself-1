@@ -8,6 +8,36 @@ var bodyParser = require('body-parser');
 var parseUrlencoded = bodyParser.urlencoded({ extended: false});
 var port = 3000;
 
+var mongo = require('mongodb');
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/express-yourself/data');
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+
+//inventory data model
+var productRecordSchema = new mongoose.Schema({
+  itemName: String,
+  price: Number,
+  quantity: Number
+});
+
+var productRecordModel = mongoose.model('productRecordModel', productRecordSchema, 'productcollection');
+
+/* GET productlist page. */
+app.get('/inventory', function(req, res) {
+  var db = req.db;
+  var model = req.model;
+  model.find(function (err, docs) {
+    console.log("docs", docs);
+    // res.render('productlist', {
+
+    // });
+  });
+});
+
+
+/*-----------------*/
 var donuts = {
   'Monday'    : 'Jelly Donut',
   'Tuesday'   : 'Lemon Poppyseed',
