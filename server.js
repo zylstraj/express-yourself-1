@@ -10,18 +10,19 @@ var port = 3000;
 
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/nodetest1/data');
+mongoose.connect('mongodb://localhost/express-yourself/data');
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 
 //data model
-var userRecordSchema = new mongoose.Schema({
-  username: String,
-  email: String
+var productRecordSchema = new mongoose.Schema({
+  itemName: String,
+  price: Number,
+  quantity: Number
 });
 
-var userRecordModel = mongoose.model('userRecordModel', userRecordSchema, 'usercollection');
+var productRecordModel = mongoose.model('productRecordModel', productRecordSchema, 'productcollection');
 
 
 
