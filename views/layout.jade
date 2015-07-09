@@ -12,27 +12,12 @@ html
         p
           a(href='/') Home
           a(href='about') About
+          a(href='inventory') Inventory
       div.container
         section.main-content
           block content
         aside.sidebar
           block sidebar
-        section
-          form(id='today_donut')
-            select(id='select_day')
-              option(name='Monday', val='Monday') Monday
-              option(name='Tuesday', val='Tuesday') Tuesday
-              option(name='Wednesday', val='Wednesday') Wednesday
-              option(name='Thursday', val='Thursday') Thursday
-              option(name='Friday', val='Friday') Friday
-              option(name='Saturday', val='Saturday') Saturday
-              option(name='Sunday', val='Sunday') Sunday
-            input(type="Submit")
-
-          form(id='form_donut')
-            input(type="text", name="name" placeholder="Holiday")
-            input(type="text", name="description" placeholder="flavor")
-            input(type="Submit")
       footer
         p Running on node with Express and Jade
     script(src='https://code.jquery.com/jquery-2.1.4.min.js')

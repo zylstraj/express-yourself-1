@@ -1,0 +1,24 @@
+extend layout
+
+block content
+  section
+    form(id='post_inventory_item')
+      label
+      input(type="text", id="post_name", placeholder="item name")
+      input(type="text", id="post_price", placeholder="$amt whole#")
+      input(type="number", id="post_quantity", min="1")
+      input(type="Submit")
+  section
+    ol
+      li(id="inventory_header")
+        span(class="span_description") Item
+        span(class="span_price") $price
+        Span(class="span_qty") Qty
+
+block sidebar
+  .spotlight
+    h1 Aside
+    p
+      | Chrome artisanal stimulate boy smart-dome skyscraper marketing pistol sensory urban dissident dolphin cardboard digital.
+    p
+      | Media nodal point ablative hacker Tokyo motion concrete RAF papier-mache Chiba. Shibuya tiger-team pistol girl narrative-space computer smart.
