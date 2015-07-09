@@ -15,7 +15,7 @@ mongoose.connect('mongodb://localhost/express-yourself/data');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 
-//data model
+//inventory data model
 var productRecordSchema = new mongoose.Schema({
   itemName: String,
   price: Number,
@@ -24,7 +24,17 @@ var productRecordSchema = new mongoose.Schema({
 
 var productRecordModel = mongoose.model('productRecordModel', productRecordSchema, 'productcollection');
 
+/* GET productlist page. */
+app.get('/inventory', function(req, res) {
+  var db = req.db;
+  var model = req.model;
+  model.find(function (err, docs) {
+    console.log("docs", docs);
+    // res.render('productlist', {
 
+    // });
+  });
+});
 
 
 /*-----------------*/
