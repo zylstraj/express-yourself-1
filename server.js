@@ -8,6 +8,25 @@ var bodyParser = require('body-parser');
 var parseUrlencoded = bodyParser.urlencoded({ extended: false});
 var port = 3000;
 
+var mongo = require('mongodb');
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/nodetest1/data');
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+
+//data model
+var userRecordSchema = new mongoose.Schema({
+  username: String,
+  email: String
+});
+
+var userRecordModel = mongoose.model('userRecordModel', userRecordSchema, 'usercollection');
+
+
+
+
+/*-----------------*/
 var donuts = {
   'Monday'    : 'Jelly Donut',
   'Tuesday'   : 'Lemon Poppyseed',
