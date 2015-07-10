@@ -1,0 +1,94 @@
+$blue-gray: #3E606F
+$off-white: #FCFFF5
+$pale-green: #D1DBBD
+$dk-blue-gray-green: #193441
+
+body
+  font-family: 'Georgia'
+  background-color: $off-white
+  color: $dk-blue-gray-green
+  margin: 0
+
+header
+  width: 40em
+  margin: 0 auto 1em auto
+  font-family: 'Quicksand'
+  color: white
+  background-color: $blue-gray
+  padding: 2em 0.5em
+  font-size: 1.5em
+  text-align: center
+  p
+    line-height: 1.8
+
+.container
+  width: 60em
+  margin: 1em auto
+  overflow: hidden
+
+.navbar
+  width: 60em
+  margin: 1em auto
+  padding: 0.5em
+  background-color: $dk-blue-gray-green
+  color: white
+  font-family: sans-serif
+  p
+    a
+      color: white
+      margin: 1em
+      text-decoration: none
+      &:hover
+        color: $blue-gray
+
+.main-content
+  float: left
+  width: 75%
+  p
+    margin-bottom: 1em
+  img
+    width: 50%
+
+.sidebar
+  float: left
+  width: 25%
+  img
+    width: 100%
+  .spotlight
+    border-radius: 0.25em
+    border: 1px solid $dk-blue-gray-green
+    margin-left: 1em
+    background-color: $pale-green
+    h1
+      font-family: 'Quicksand'
+      padding-left: 0.5em
+      padding-bottom: 0.5em
+      border-bottom: 1px dotted $dk-blue-gray-green
+      margin-bottom: 0.5em
+    p
+      padding: 0 0.5em
+      margin-bottom: 0.5em
+
+
+footer
+  width: 60em
+  margin: 3em auto
+  border-top: 1px dotted #ccc
+  padding-top: 0.25em
+  font-size: 0.7em
+  text-align: center
+
+
+/* inventory*/
+#inventory_header
+  width: 40em
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-between
+  align-content: center
+  align-items: center
+
+input
+  cursor: pointer
+

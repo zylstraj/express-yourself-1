@@ -1,4 +1,87 @@
-main {
-  margin: auto; }
+body {
+  font-family: "Georgia";
+  background-color: #FCFFF5;
+  color: #193441;
+  margin: 0; }
+
+header {
+  width: 40em;
+  margin: 0 auto 1em auto;
+  font-family: "Quicksand";
+  color: white;
+  background-color: #3E606F;
+  padding: 2em 0.5em;
+  font-size: 1.5em;
+  text-align: center; }
+  header p {
+    line-height: 1.8; }
+
+.container {
+  width: 60em;
+  margin: 1em auto;
+  overflow: hidden; }
+
+.navbar {
+  width: 60em;
+  margin: 1em auto;
+  padding: 0.5em;
+  background-color: #193441;
+  color: white;
+  font-family: sans-serif; }
+  .navbar p a {
+    color: white;
+    margin: 1em;
+    text-decoration: none; }
+    .navbar p a:hover {
+      color: #3E606F; }
+
+.main-content {
+  float: left;
+  width: 75%; }
+  .main-content p {
+    margin-bottom: 1em; }
+  .main-content img {
+    width: 50%; }
+
+.sidebar {
+  float: left;
+  width: 25%; }
+  .sidebar img {
+    width: 100%; }
+  .sidebar .spotlight {
+    border-radius: 0.25em;
+    border: 1px solid #193441;
+    margin-left: 1em;
+    background-color: #D1DBBD; }
+    .sidebar .spotlight h1 {
+      font-family: "Quicksand";
+      padding-left: 0.5em;
+      padding-bottom: 0.5em;
+      border-bottom: 1px dotted #193441;
+      margin-bottom: 0.5em; }
+    .sidebar .spotlight p {
+      padding: 0 0.5em;
+      margin-bottom: 0.5em; }
+
+footer {
+  width: 60em;
+  margin: 3em auto;
+  border-top: 1px dotted #ccc;
+  padding-top: 0.25em;
+  font-size: 0.7em;
+  text-align: center; }
+
+/* inventory */
+#inventory_header {
+  width: 40em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center; }
+
+input {
+  cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */

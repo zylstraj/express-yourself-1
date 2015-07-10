@@ -1,12 +1,4 @@
 $('document').ready(function(){
-//   console.log("Hello, click on me if you dare!");
-//   $('section, nav, aside, header, footer').click(function(){
-//     $(this).toggleClass('whimsy');
-//   });
-//   $('.reset_classes').click(function(){
-//     $('*').removeClass('whimsy');
-//   });
-
 
   // $('#form_donut').on('submit', function(e){
   //   e.preventDefault();
@@ -36,8 +28,9 @@ $('document').ready(function(){
     var postData = form.serialize();
     $.ajax({
       type        :   'POST',
-      url         :   '/inventory',
+      url         :   'api/inventory',
       data        :   postData,
+      dataType    :   "json",
       success     :   function successful(data) {
         console.log("Request was successful");
         console.log(data)

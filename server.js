@@ -7,14 +7,18 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var parseUrlencoded = bodyParser.urlencoded({ extended: false});
 var port = 3000;
-
+var morgan   = require('morgan');
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/express-yourself/data');
+var inventoryRouter = express.Router();
 
+mongoose.connect('mongodb://localhost/data');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 
+//routes
+require('./app/routes')(inventoryRouter);
+app.use('/api', inventoryRouter);
 
 /* GET productlist page. */
 // app.get('/inventory', function(req, res) {
@@ -29,15 +33,7 @@ db.on('error', console.error.bind(console, 'connection error:'));
 // });
 
 
-app.post('/inventory', parseUrlencoded, function(req, res) {
-  productcollection.create({
-    itemName : req.body.itemName,
-    price : req.body.price,
-    quantity : req.body.quantity,
-    done : false
-  })
-  console.log(req.body);
-});
+
 
 
 
@@ -52,8 +48,8 @@ app.get('/', function(req, res){
 app.get('/about', function (req, res) {
   res.render('about');
 });
-app.get('/inventory', function (req, res) {
-  res.render('inventory');
+app.get('/inventory-mgr', function (req, res) {
+  res.render('inventory-mgr');
 });
 
 //static services
