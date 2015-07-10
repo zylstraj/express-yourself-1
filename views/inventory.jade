@@ -4,9 +4,9 @@ block content
   section
     form(id='post_inventory_item')
       label
-      input(type="text", id="post_name", placeholder="item name")
-      input(type="text", id="post_price", placeholder="$amt whole#")
-      input(type="number", id="post_quantity", min="1")
+      input(type="text", id="post_name", name="itemName" placeholder="item name")
+      input(type="text", id="post_price", name="price" placeholder="$amt whole#")
+      input(type="number", id="post_quantity", name="quantity" min="1")
       input(type="Submit")
   section
     ol

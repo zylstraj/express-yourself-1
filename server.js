@@ -15,56 +15,31 @@ mongoose.connect('mongodb://localhost/express-yourself/data');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 
-//inventory data model
-var productRecordSchema = new mongoose.Schema({
-  itemName: String,
-  price: Number,
-  quantity: Number
-});
-
-var productRecordModel = mongoose.model('productRecordModel', productRecordSchema, 'productcollection');
 
 /* GET productlist page. */
-app.get('/inventory', function(req, res) {
-  var db = req.db;
-  var model = req.model;
-  model.find(function (err, docs) {
-    console.log("docs", docs);
-    // res.render('productlist', {
+// app.get('/inventory', function(req, res) {
+//   var db = req.db;
+//   var model = req.model;
+//   model.find(function (err, docs) {
+//     console.log("docs", docs);
+//     // res.render('productlist', {
 
-    // });
-  });
-});
+//     // });
+//   });
+// });
 
 
-/*-----------------*/
-var donuts = {
-  'Monday'    : 'Jelly Donut',
-  'Tuesday'   : 'Lemon Poppyseed',
-  'Wednesday' : 'Bear Claw',
-  'Thursday'  : 'Glazed',
-  'Friday'    : 'Sprinkles',
-  'Saturday'  : 'Double Donut Day',
-  'Sunday'    : 'Boston Cream'
-};
-app.get('/donuts/:name', function(req, res){
-  var description = donuts[req.params.name];
-  res.json(description);
-});
-app.post('/donuts', parseUrlencoded, function(req, res){
-  var newDonut = req.body;
-  donuts[newDonut.name] = newDonut.description;
+app.post('/inventory', parseUrlencoded, function(req, res) {
+  productcollection.create({
+    itemName : req.body.itemName,
+    price : req.body.price,
+    quantity : req.body.quantity,
+    done : false
+  })
   console.log(req.body);
-  res.status(201).json(newDonut);
 });
 
-app.put('/donuts/:name', function(req, res){
-  console.log("I am putting");
-});
 
-app.delete('/donuts/:name', function(req, res){
-  console.log("I am deleting");
-});
 
 //view directory setup
 app.set('views', path.join(__dirname, 'views'));
