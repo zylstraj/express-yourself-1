@@ -29,20 +29,22 @@ app.get('/donuts/:name', function(req, res){
 //POST
 app.post('/donuts', parseUrlencoded, function(req, res){
   console.log("Posting...");
-  var newDonut = req.body;
-  donuts[newDonut.name] = newDonut.description;
-  console.log(req.body);
-  res.status(201).json(newDonut);
+  //var newDonut = req.body;
+  //donuts[newDonut.name] = newDonut.description;
+  //console.log("req.body: ", req.body);
+  //res.status(201).json(newDonut);
 });
 
 //PUT
 app.put('/donuts/:name', function(req, res){
   console.log("Putting...");
+  console.log("req.body: ", req.body);
 });
 
 //DELETE
 app.delete('/donuts/:name', function(req, res){
   console.log("Deleting...");
+  console.log("req", req);
 });
 
 //setup view directory
