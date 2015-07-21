@@ -56,21 +56,21 @@ app.delete('/donuts/:name', function(req, res){
 });
 
 //setup view directory
-app.set('views', path.join(__dirname, 'views'));
+//app.set('views', path.join(__dirname, 'views'));
 //setup view engine
-app.set('view engine', 'jade');
+//app.set('view engine', 'jade');
 
 //display root
-app.get('/', function(req, res){
-  res.render('index');
-});
+//app.get('/', function(req, res){
+  //res.render('index');
+//});
 //display about
-app.get('/about', function (req, res) {
-  res.render('about');
-});
+//app.get('/about', function (req, res) {
+  //res.render('about');
+//});
 
 //static services
-app.use(express.static(path.join(__dirname, 'public'))); //serve everything inside public directory
+app.use(express.static(path.join(__dirname, 'dev'))); //serve everything inside public directory
 
 //app listener
 app.listen(port, function(){  //on port 3000
