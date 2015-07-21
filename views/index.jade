@@ -7,7 +7,7 @@ block get-donut
   section.donut-form
     h3 Current daily donut specials
     form(id='daily_donut')
-      select(id='select_day')
+      select(id='get-select_day')
         option(name='Monday', val='Monday') Monday
         option(name='Tuesday', val='Tuesday') Tuesday
         option(name='Wednesday', val='Wednesday') Wednesday
@@ -30,7 +30,7 @@ block put-donut
     h3 Update the Menu
     p Choose day of the week
     form(id='update_donut')
-      select(id='select_day')
+      select(id='update-select_day')
         option(name='Monday', val='Monday') Monday
         option(name='Tuesday', val='Tuesday') Tuesday
         option(name='Wednesday', val='Wednesday') Wednesday
@@ -47,7 +47,7 @@ block put-donut
     h3 Delete a daily special
     p Choose day of the week to delete
     form(id='delete_donut')
-      select(id='select_day')
+      select(id='delete-select_day')
         option(name='Monday', val='Monday') Monday
         option(name='Tuesday', val='Tuesday') Tuesday
         option(name='Wednesday', val='Wednesday') Wednesday

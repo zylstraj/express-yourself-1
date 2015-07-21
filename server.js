@@ -29,7 +29,6 @@ app.get('/donuts/:name', function(req, res){
 //POST
 app.post('/donuts', parseUrlencoded, function(req, res){
   console.log("Posting...");
-
   var newDonut = req.body;
   donuts[newDonut.name] = newDonut.description;
   console.log(req.body);
@@ -38,13 +37,12 @@ app.post('/donuts', parseUrlencoded, function(req, res){
 
 //PUT
 app.put('/donuts/:name', function(req, res){
-  console.log("I am putting");
+  console.log("Putting...");
 });
-
 
 //DELETE
 app.delete('/donuts/:name', function(req, res){
-  console.log("I am deleting");
+  console.log("Deleting...");
 });
 
 //setup view directory
