@@ -76,3 +76,4 @@ app.use(express.static(path.join(__dirname, 'public'))); //serve everything insi
 app.listen(port, function(){  //on port 3000
   console.log("my awesome server is running on port: " + port);
 });
+
