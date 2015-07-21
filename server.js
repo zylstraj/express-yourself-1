@@ -29,22 +29,33 @@ app.get('/donuts/:name', function(req, res){
 //POST
 app.post('/donuts', parseUrlencoded, function(req, res){
   console.log("Posting...");
-  //var newDonut = req.body;
-  //donuts[newDonut.name] = newDonut.description;
-  //console.log("req.body: ", req.body);
-  //res.status(201).json(newDonut);
+  var newDonut = req.body;
+  donuts[newDonut.name] = newDonut.description;
+  console.log("req.body: ", req.body);
+  res.status(201).json(newDonut);
 });
 
 //PUT
 app.put('/donuts/:name', function(req, res){
   console.log("Putting...");
-  console.log("req.body: ", req.body);
+  var name = req.params.name;
+  var description = donuts[req.params.name];
+  console.log("name", name);
+  console.log("description", description);
+  //code here to assemble key:value pair with name:descript
+  //find old value and remove it
+  //add new value
 });
 
 //DELETE
 app.delete('/donuts/:name', function(req, res){
   console.log("Deleting...");
-  console.log("req", req);
+  var name = req.params.name;
+  var description = donuts[req.params.name];
+  console.log("name", name);
+  console.log("description", description);
+  //code here to find matching key:value pair
+  //then remove it from DB
 });
 
 //setup view directory
