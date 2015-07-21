@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Donut Menu</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet"  href="http://fonts.googleapis.com/css?family=Quicksand">
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Buckeye Donuts</h1>
+      </header>
+      <nav class="navbar">
+        <p><a href="/">Home</a><a href="about">About</a></p>
+      </nav>
+      <div class="container">
+      <h1>Donut Menu Management</h1>
+
+      <section class="donut-form">
+        <h3>Current daily donut specials</h3>
+        <form id="daily_donut">
+          <select id="get-select_day">
+            <option name="Monday" val="Monday">Monday</option>
+            <option name="Tuesday" val="Tuesday">Tuesday</option>
+            <option name="Wednesday" val="Wednesday">Wednesday</option>
+            <option name="Thursday" val="Thursday">Thursday</option>
+            <option name="Friday" val="Friday">Friday</option>
+            <option name="Saturday" val="Saturday">Saturday</option>
+            <option name="Sunday" val="Sunday">Sunday</option>
+          </select>
+          <input type="Submit"/>
+        </form>
+      </section>
+
+      <section class="donut-form">
+        <h3>Add a new holiday donut special</h3>
+        <form id="new_donut">
+          <input type="text" name="name" placeholder="Holiday"/>
+          <input type="text" name="description" placeholder="flavor"/>
+          <input type="Submit"/>
+        </form>
+      </section>
+
+      <section class="donut-form">
+        <h3>Update the Menu</h3>
+        <p>Choose day of the week</p>
+        <form id="update_donut">
+          <select id="update-select_day">
+            <option name="Monday" val="Monday">Monday</option>
+            <option name="Tuesday" val="Tuesday">Tuesday</option>
+            <option name="Wednesday" val="Wednesday">Wednesday</option>
+            <option name="Thursday" val="Thursday">Thursday</option>
+            <option name="Friday" val="Friday">Friday</option>
+            <option name="Saturday" val="Saturday">Saturday</option>
+            <option name="Sunday" val="Sunday">Sunday</option>
+          </select>
+          <p>Enter new flavor</p>
+          <input type="text" name="update_description" placeholder="flavor"/>
+          <input type="Submit"/>
+        </form>
+      </section>
+
+      <section class="donut-form">
+        <h3>Delete a daily special</h3>
+        <p>Choose day of the week to delete</p>
+        <form id="delete_donut">
+          <select id="delete-select_day">
+            <option name="Monday" val="Monday">Monday</option>
+            <option name="Tuesday" val="Tuesday">Tuesday</option>
+            <option name="Wednesday" val="Wednesday">Wednesday</option>
+            <option name="Thursday" val="Thursday">Thursday</option>
+            <option name="Friday" val="Friday">Friday</option>
+            <option name="Saturday" val="Saturday">Saturday</option>
+            <option name="Sunday" val="Sunday">Sunday</option>
+          </select>
+          <input type="Submit"/>
+        </form>
+      </section>
+
+      <div class="spotlight">
+        <h1>Only the best ingredients</h1>
+        <p>Chrome artisanal stimulate boy smart-dome skyscraper marketing pistol sensory urban dissident dolphin cardboard digital.</p>
+        <p>Media nodal point ablative hacker Tokyo motion concrete RAF papier-mache Chiba. Shibuya tiger-team pistol girl narrative-space computer smart.</p>
+      </div>
+    </div>

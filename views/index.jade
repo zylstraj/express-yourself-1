@@ -1,19 +1,65 @@
 extend layout
 
-block content
-  //- img(src="bottles.jpg")
-  p
-    | Meta-nodality post-receding shanty town savant cardboard-ware jeans.
-    | Hotdog marketing cartel wristwatch claymore mine rebar jeans rain DIY.
-    | Shanty town pistol tower savant fetishism Tokyo motion tanto. Marketing
-    | paranoid drone film concrete vinyl artisanal city bicycle camera smart-garage
-    | grenade physical dolphin.
-  p
-    | Grenade shoes woman San Francisco garage wristwatch engine saturation point bridge film uplink assassin futurity tower-ware jeans. Dissident sensory uplink rain assassin pen cardboard dome boy physical tanto pistol into dolphin Legba j-pop semiotics. Legba office artisanal fetishism dead Chiba decay.
+block heading
+  h1 Donut Menu Management
+
+block get-donut
+  section.donut-form
+    h3 Current daily donut specials
+    form(id='daily_donut')
+      select(id='get-select_day')
+        option(name='Monday', val='Monday') Monday
+        option(name='Tuesday', val='Tuesday') Tuesday
+        option(name='Wednesday', val='Wednesday') Wednesday
+        option(name='Thursday', val='Thursday') Thursday
+        option(name='Friday', val='Friday') Friday
+        option(name='Saturday', val='Saturday') Saturday
+        option(name='Sunday', val='Sunday') Sunday
+      input(type="Submit")
+
+block post-donut
+  section.donut-form
+    h3 Add a new holiday donut special
+    form(id='new_donut')
+      input(type="text", name="name" placeholder="Holiday")
+      input(type="text", name="description" placeholder="flavor")
+      input(type="Submit")
+
+block put-donut
+  section.donut-form
+    h3 Update the Menu
+    p Choose day of the week
+    form(id='update_donut')
+      select(id='update-select_day')
+        option(name='Monday', val='Monday') Monday
+        option(name='Tuesday', val='Tuesday') Tuesday
+        option(name='Wednesday', val='Wednesday') Wednesday
+        option(name='Thursday', val='Thursday') Thursday
+        option(name='Friday', val='Friday') Friday
+        option(name='Saturday', val='Saturday') Saturday
+        option(name='Sunday', val='Sunday') Sunday
+      p Enter new flavor
+      input(type="text", name="update_description" placeholder="flavor")
+      input(type="Submit")
+
+  block delete-donut
+  section.donut-form
+    h3 Delete a daily special
+    p Choose day of the week to delete
+    form(id='delete_donut')
+      select(id='delete-select_day')
+        option(name='Monday', val='Monday') Monday
+        option(name='Tuesday', val='Tuesday') Tuesday
+        option(name='Wednesday', val='Wednesday') Wednesday
+        option(name='Thursday', val='Thursday') Thursday
+        option(name='Friday', val='Friday') Friday
+        option(name='Saturday', val='Saturday') Saturday
+        option(name='Sunday', val='Sunday') Sunday
+      input(type="Submit")
 
 block sidebar
   .spotlight
-    h1 Aside
+    h1 Only the best ingredients
     p
       | Chrome artisanal stimulate boy smart-dome skyscraper marketing pistol sensory urban dissident dolphin cardboard digital.
     p
