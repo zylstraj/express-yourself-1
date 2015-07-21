@@ -21,12 +21,15 @@ var donuts = {
 
 //GET
 app.get('/donuts/:name', function(req, res){
+  console.log("Getting...");
   var description = donuts[req.params.name];
   res.json(description);
 });
 
 //POST
 app.post('/donuts', parseUrlencoded, function(req, res){
+  console.log("Posting...");
+
   var newDonut = req.body;
   donuts[newDonut.name] = newDonut.description;
   console.log(req.body);
@@ -49,9 +52,11 @@ app.set('views', path.join(__dirname, 'views'));
 //setup view engine
 app.set('view engine', 'jade');
 
+//display root
 app.get('/', function(req, res){
   res.render('index');
 });
+//display about
 app.get('/about', function (req, res) {
   res.render('about');
 });

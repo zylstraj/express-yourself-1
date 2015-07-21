@@ -6,9 +6,6 @@ body {
   color: #193441; /*dk blue gray green*/
   margin: 0;
 }
-main {
-  cursor: pointer;
-}
 header {
   width: 40em;
   margin: 0 auto 1em auto;
@@ -43,7 +40,6 @@ p {
 .navbar p a:hover {
   color:#3E606F; /*blue gray*/;
 }
-
 .main-content {
   float: left;
   width: 75%;
@@ -54,7 +50,6 @@ p {
 .main-content img {
   width: 50%;
 }
-
 .sidebar {
   float: left;
   width: 25%;
@@ -79,7 +74,6 @@ p {
   padding: 0 .5em;
   margin-bottom: .5em;
 }
-
 footer {
   width: 60em;
   margin: 3em auto;
@@ -87,11 +81,6 @@ footer {
   padding-top: .25em;
   font-size: .7em;
   text-align: center;
-}
-.whimsy {
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
-  color: pink;
-  background-color: purple;
 }
 .reset_classes {
   position: fixed;

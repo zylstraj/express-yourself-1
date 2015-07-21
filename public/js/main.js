@@ -1,14 +1,7 @@
 $('document').ready(function(){
-//   console.log("Hello, click on me if you dare!");
-//   $('section, nav, aside, header, footer').click(function(){
-//     $(this).toggleClass('whimsy');
-//   });
-//   $('.reset_classes').click(function(){
-//     $('*').removeClass('whimsy');
-//   });
 
-
-  $('#form_donut').on('submit', function(e){
+  //when new donut is submitted
+  $('#new_donut').on('submit', function(e){
     e.preventDefault();
     var form = $(this);
     var donutData = form.serialize();
@@ -20,7 +13,8 @@ $('document').ready(function(){
     });
   });
 
-  $('#today_donut').on('submit', function(e){
+  //when daily dropdown is submitted
+  $('#daily_donut').on('submit', function(e){
     e.preventDefault();
     var getDay = $('#select_day option:selected').val();
     var thisURL = '/donuts/' + getDay;
