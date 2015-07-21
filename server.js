@@ -29,31 +29,28 @@ app.get('/donuts/:name', function(req, res){
 //POST
 app.post('/donuts', parseUrlencoded, function(req, res){
   console.log("Posting...");
+  console.log("req.body: ", req.body);
   var newDonut = req.body;
   donuts[newDonut.name] = newDonut.description;
-  console.log("req.body: ", req.body);
   res.status(201).json(newDonut);
+  //code here to add pair to DB
 });
 
 //PUT
 app.put('/donuts/:name', function(req, res){
   console.log("Putting...");
-  var name = req.params.name;
-  var description = donuts[req.params.name];
-  console.log("name", name);
-  console.log("description", description);
+  var key = req.params.name;
+  console.log("key", key);
   //code here to assemble key:value pair with name:descript
   //find old value and remove it
-  //add new value
+  //add new value (to appear like replacing)
 });
 
 //DELETE
 app.delete('/donuts/:name', function(req, res){
   console.log("Deleting...");
-  var name = req.params.name;
-  var description = donuts[req.params.name];
-  console.log("name", name);
-  console.log("description", description);
+  var key = req.params.name;
+  console.log("key", key);
   //code here to find matching key:value pair
   //then remove it from DB
 });

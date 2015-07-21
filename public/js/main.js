@@ -1,5 +1,6 @@
 $('document').ready(function(){
 
+  //GET
   //when daily menu dropdown is submitted
   $('#daily_donut').on('submit', function(e){
     e.preventDefault();
@@ -16,6 +17,7 @@ $('document').ready(function(){
     });
   });
 
+  //POST
   //when new holiday donut is submitted
   $('#new_donut').on('submit', function(e){
     e.preventDefault();
@@ -32,6 +34,7 @@ $('document').ready(function(){
     });
   });
 
+  //PUT
   //when daily menu dropdown is submitted
   $('#update_donut').on('submit', function(e){
     e.preventDefault();
@@ -52,6 +55,7 @@ $('document').ready(function(){
     });
   });
 
+  //DELETE
   //when daily menu dropdown is submitted
   $('#delete_donut').on('submit', function(e){
     e.preventDefault();
