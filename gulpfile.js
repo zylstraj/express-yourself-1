@@ -9,7 +9,7 @@ var uglify = require('gulp-uglify');
 gulp.task('sass', function () {
   gulp.src('./sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./build/css/'));
+    .pipe(gulp.dest('../dev/css/'));
 });
 
 gulp.task('sass:watch', function () {
@@ -28,15 +28,15 @@ gulp.task('webpackdev', function() {
 });
 
 gulp.task('minify-css', function() {
-  return gulp.src('styles/*.css')
+  return gulp.src('./dev/CSS/*.css')
     .pipe(minifyCss({compatibility: 'ie8'}))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('./build/CSS/'));
 });
 
 gulp.task('compress', function() {
   return gulp.src('lib/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('build'));
 });
 
 gulp.task('copy', function() {
@@ -44,11 +44,11 @@ gulp.task('copy', function() {
     conditionals: true,
     spare:true
   };
-    return gulp.src('app/**/*.html')
-    .pipe(gulp.dest('dev/'))
+    return gulp.src('dev/**/*.html')
+    .pipe(gulp.dest('build/'))
     //.pipe(minifyHTML(opts))
-    .pipe(gulp.dest('./dev/'));
+    .pipe(gulp.dest('./build/'));
 });
 
-gulp.task('build', ['copy', 'webpackdev', 'sass']);
+gulp.task('build', ['copy', 'copyServer', 'webpackdev', 'minify-css']);
 gulp.task('default', ['build']);

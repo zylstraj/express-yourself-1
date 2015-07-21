@@ -56,10 +56,9 @@ app.delete('/donuts/:name', function(req, res){
 });
 
 //setup view directory
-app.set('views', path.join(__dirname, 'views'));
+//app.set('views', path.join(__dirname, 'views'));
 //setup view engine
 //app.set('view engine', 'jade');
-//app.set('view engine', 'html');
 
 
 //display root
