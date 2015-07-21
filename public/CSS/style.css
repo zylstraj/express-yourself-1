@@ -50,6 +50,11 @@ p {
 .main-content img {
   width: 50%;
 }
+.donut-form {
+  padding: 1em;
+  border: thin solid black
+}
+
 .sidebar {
   float: left;
   width: 25%;

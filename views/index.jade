@@ -1,10 +1,11 @@
 extend layout
 
-block content
+block heading
   h1 Donut Menu Management
-  section
-    p
-    | View daily donut specials:
+
+block get-donut
+  section.donut-form
+    h3 Current daily donut specials
     form(id='daily_donut')
       select(id='select_day')
         option(name='Monday', val='Monday') Monday
@@ -15,16 +16,19 @@ block content
         option(name='Saturday', val='Saturday') Saturday
         option(name='Sunday', val='Sunday') Sunday
       input(type="Submit")
-    p
-    | Add a new holiday donut special:
+
+block post-donut
+  section.donut-form
+    h3 Add a new holiday donut special
     form(id='new_donut')
       input(type="text", name="name" placeholder="Holiday")
       input(type="text", name="description" placeholder="flavor")
       input(type="Submit")
-    p
-    | Update the Menu
-    | Choose day of the week
-    | Enter new flavor and click submit
+
+block put-donut
+  section.donut-form
+    h3 Update the Menu
+    p Choose day of the week
     form(id='update_donut')
       select(id='select_day')
         option(name='Monday', val='Monday') Monday
@@ -34,13 +38,14 @@ block content
         option(name='Friday', val='Friday') Friday
         option(name='Saturday', val='Saturday') Saturday
         option(name='Sunday', val='Sunday') Sunday
-      input(type="Submit")
+      p Enter new flavor
       input(type="text", name="update_description" placeholder="flavor")
       input(type="Submit")
 
-    p
-    | Delete a daily special
-    | Choose day of the week to delete
+  block delete-donut
+  section.donut-form
+    h3 Delete a daily special
+    p Choose day of the week to delete
     form(id='delete_donut')
       select(id='select_day')
         option(name='Monday', val='Monday') Monday
@@ -51,7 +56,6 @@ block content
         option(name='Saturday', val='Saturday') Saturday
         option(name='Sunday', val='Sunday') Sunday
       input(type="Submit")
-
 
 block sidebar
   .spotlight
