@@ -17,7 +17,7 @@ gulp.task('sass:watch', function () {
 });
 
 gulp.task('webpackdev', function() {
-  return gulp.src('./dev/js/main.js')
+  return gulp.src('./dev/js/**.js')
     .pipe(webpack({
       output: {
         filename: 'bundle.js'
@@ -50,5 +50,5 @@ gulp.task('copy', function() {
     .pipe(gulp.dest('./build/'));
 });
 
-gulp.task('build', ['copy', 'copyServer', 'webpackdev', 'minify-css']);
+gulp.task('build', ['copy', 'webpackdev', 'minify-css']);
 gulp.task('default', ['build']);
