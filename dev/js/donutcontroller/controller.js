@@ -14,7 +14,7 @@ module.exports = function(app) {
     getAll();
 
     $scope.submitForm = function(donut) {
-      console.log(setting);
+      console.log(donut.day);
       $http.post('/donuts', donut).success(function(response) {
         getAll();
       });

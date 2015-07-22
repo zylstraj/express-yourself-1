@@ -46,14 +46,14 @@ module.exports = function(router) {
   //   });
   // });
 
-  // router.delete('/donuts/:id', function(req, res) {
-  //   console.log('You hit delete');
-  //   Setting.remove({'_id': req.params.id}, function(err, data) {
-  //     if (err) {
-  //       errorResponse(err, res);
-  //       return;
-  //     }
-  //     res.json({msg: "DELETED"})
-  //   });
-  // });
+  router.delete('/donuts/:id', function(req, res) {
+    console.log('You hit delete');
+    Donut.remove({'_id': req.params.id}, function(err, data) {
+      if (err) {
+        errorResponse(err, res);
+        return;
+      }
+      res.json({msg: "DELETED"})
+    });
+  });
 };
