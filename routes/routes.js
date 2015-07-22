@@ -31,20 +31,20 @@ module.exports = function(router) {
     });
   });
 
-  // router.put('/donuts/:id', function (req, res) {
-  //   console.log('Hit update route');
-  //   var updatedSetting = req.body;
-  //   delete updatedSetting._id;
+  router.put('/donuts/:id', function (req, res) {
+    console.log('Hit update route');
+    var updatedDonut = req.body;
+    delete updatedDonut._id;
 
-  //   Setting.update({'_id': req.params.id}, updatedSetting, function (err, data) {
-  //     console.log(req.body);
-  //     if (err) {
-  //       errorResponse(err, res);
-  //       return;
-  //     }
-  //     res.json({msg: 'updated successfully'});
-  //   });
-  // });
+    Donut.update({'_id': req.params.id}, updatedDonut, function (err, data) {
+      console.log(req.body);
+      if (err) {
+        errorResponse(err, res);
+        return;
+      }
+      res.json({msg: 'updated successfully'});
+    });
+  });
 
   router.delete('/donuts/:id', function(req, res) {
     console.log('You hit delete');

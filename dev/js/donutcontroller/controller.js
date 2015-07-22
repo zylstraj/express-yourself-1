@@ -28,8 +28,13 @@ module.exports = function(app) {
     }
 
     $scope.edit = function(donut) {
-      donut.editing = true;
+      donut.editing = false;
       console.log(donut);
+
+      $http.put('/donuts/' + donut._id, donut).success(function(response){
+        getAll();
+      });
+
     };
 
   }])};
