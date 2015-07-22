@@ -7,7 +7,7 @@ module.exports = function(app) {
   app.controller('appController', ['$scope', '$http', function($scope, $http) {
     var getAll = function(){
       $http.get('/donuts').success(function(response){
-        console.log(response);
+        console.log("inside getall", response);
         $scope.donuts = response;
       });
     };
