@@ -33,23 +33,20 @@
               </li>
 
               <li>
-                <button>Edit</button>
-                <button>Delete</button>
+                <button data-ng-click="edit(donut)">Edit</button>
+                <button data-ng-click="destroy(donut._id)">Delete</button>
               </li>
             </ul>
           </li>
         </ul>
-          <h3>Current daily donut specials</h3>
-          <p>replace with for each that displays cards</p>
-          <button>Add</button>
-          <button>Delete</button>
         </section>
 
-        <section class="donut-form">
+        <section class="donut-form" data-ng-submit="submitForm(donut)">
           <h3>Add a new donut special</h3>
           <form id="new_donut">
-            <input type="text" name="name" placeholder="Holiday"/>
-            <input type="text" name="description" placeholder="flavor"/>
+            <input type="text" name="name" placeholder="Day" data-ng-model="donut.day"/>
+            <input type="text" name="flavor" placeholder="Flavor" data-ng-model="donut.flavor"/>
+            <input type="text" name="description" placeholder="Description" data-ng-model="donut.description"/>
             <input type="Submit"/>
           </form>
         </section>

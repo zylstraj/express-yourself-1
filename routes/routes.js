@@ -17,7 +17,7 @@ module.exports = function(router) {
 
   router.post('/donuts', function(req, res) {
     console.log('You hit the post')
-    var newSetting = new Setting(req.body);
+    var newSetting = new Donut(req.body);
     console.log(req.body);
     newSetting.save({}, function(err, data) {
       if (err){
@@ -30,10 +30,10 @@ module.exports = function(router) {
 
   router.put('/donuts/:id', function (req, res) {
     console.log('Hit update route');
-    var updatedSetting = req.body;
-    delete updatedSetting._id;
+    var updatedDonut = req.body;
+    delete updatedDonut._id;
 
-    Donut.update({'_id': req.params.id}, updatedSetting, function (err, data) {
+    Donut.update({'_id': req.params.id}, updatedDonut, function (err, data) {
       console.log(req.body);
       if (err) {
         errorResponse(err, res);

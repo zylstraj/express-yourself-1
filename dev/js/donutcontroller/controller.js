@@ -14,7 +14,7 @@ module.exports = function(app) {
     getAll();
 
     $scope.submitForm = function(donut) {
-      console.log(setting);
+      console.log(donut.day);
       $http.post('/donuts', donut).success(function(response) {
         getAll();
       });
@@ -30,7 +30,10 @@ module.exports = function(app) {
     $scope.edit = function(donut) {
       donut.editing = true;
       console.log(donut);
-    };
+      $http.put('/donuts/' + donut._id, donut).success(function(response) {
+        getAll();
+      });
+    }
 
   }])};
 
