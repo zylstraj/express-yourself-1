@@ -1,7 +1,7 @@
 ##Express Yourself
 Class assignment for experimenting with node.js, express, and Jade.
 * Sarah Paetsch
-* Ryan Flaherty
+* Josh Zylstra
 
 ###To install:
 1. Copy from github and retain directory structure.

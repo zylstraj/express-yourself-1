@@ -2,16 +2,18 @@
   "name": "express-yourself",
   "version": "0.1.0",
   "description": "FEDA Week 5 HW",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sarah",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.4.3",
     "body-parser": "^1.13.2",
     "express": "^4.13.1",
-    "jade": "^1.11.0"
+    "jade": "^1.11.0",
+    "mongoose": "^4.0.8"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
