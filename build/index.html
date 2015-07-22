@@ -32,11 +32,6 @@
                 Description: {{donut.description}}
               </li>
               <li>
-<<<<<<< HEAD
-                <button data-ng-click="edit(donut)">Edit</button>
-                <button data-ng-click="destroy(donut._id)">Delete</button>
-=======
-
               <section class="update-form" data-ng-if="donut.editing" data-ng-submit="submitForm(donut)">
 
                 <h3>Edit Donut</h3>
@@ -53,12 +48,10 @@
                 <button data-ng-if="!donut.editing" data-ng-click="donut.editing=true">Edit</button>
 
                 <button data-ng-if="!donut.editing" data-ng-click="destroy(donut._id)">Delete</button>
->>>>>>> 4d26517482631363f8e751b9ff29b70dfd987193
               </li>
             </ul>
           </li>
         </ul>
-<<<<<<< HEAD
         </section>
 
         <section class="donut-form" data-ng-submit="submitForm(donut)">
@@ -67,7 +60,6 @@
             <input type="text" name="name" placeholder="Day" data-ng-model="donut.day"/>
             <input type="text" name="flavor" placeholder="Flavor" data-ng-model="donut.flavor"/>
             <input type="text" name="description" placeholder="Description" data-ng-model="donut.description"/>
-=======
 
         <section class="donut-form" data-ng-submit="submitForm(newdonut)">
           <h3>Add a new donut special</h3>
@@ -76,7 +68,6 @@
             <input type="text" name="flavor" placeholder="Flavor" data-ng-model="newdonut.flavor"/>
             <input type="text" name="description" placeholder="Description" data-ng-model="newdonut.description"/>
 
->>>>>>> 4d26517482631363f8e751b9ff29b70dfd987193
             <input type="Submit"/>
           </form>
         </section>
