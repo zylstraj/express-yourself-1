@@ -24,10 +24,5 @@ app.listen(port, function(){  //on port 3000
   console.log("my awesome server is running on port: " + port);
 });
 
-//app listener
-app.listen(port, function(){  //on port 3000
-  console.log("my awesome server is running on port: " + port);
-});
-
 
 
