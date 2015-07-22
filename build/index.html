@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="donutApp">
   <head>
-    <title> Donut Menu</title>
+    <title>Donut Menu</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet"  href="http://fonts.googleapis.com/css?family=Quicksand">
   </head>
   <body>
-    <main>
+    <main data-ng-controller="appController">
       <header>
         <h1>Buckeye Donuts</h1>
       </header>
@@ -19,21 +19,44 @@
       </nav>
       <div class="container">
 
-      <h1>Donut Menu Management</h1>
+        <h1>Donut Menu Management</h1>
 
-      <section class="donut-form">
-        <h3>Current daily donut specials</h3>
-        <p>replace with for each that displays cards</p>
-        <button>Add</button>
-        <button>Delete</button>
-      </section>
+        <ul>
+          <li data-ng-repeat="donut in donuts">
+            <h3>{{donut.day}} is  {{donut}}</h3>
+            <ul>
+              <li>
+                Flavor: {{donut.flavor}}
+              </li>
+              <li>
+                Description: {{donut.description}}
+              </li>
 
-      <section class="donut-form">
-        <h3>Add a new donut special</h3>
-        <form id="new_donut">
-          <input type="text" name="name" placeholder="Holiday"/>
-          <input type="text" name="description" placeholder="flavor"/>
-          <input type="Submit"/>
-        </form>
-      </section>
-    </div>
+              <li>
+                <button>Add</button>
+                <button>Delete</button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <section class="donut-form">
+          <h3>Current daily donut specials</h3>
+          <p>replace with for each that displays cards</p>
+          <button>Add</button>
+          <button>Delete</button>
+        </section>
+
+        <section class="donut-form">
+          <h3>Add a new donut special</h3>
+          <form id="new_donut">
+            <input type="text" name="name" placeholder="Holiday"/>
+            <input type="text" name="description" placeholder="flavor"/>
+            <input type="Submit"/>
+          </form>
+        </section>
+      </div>
+    </main>
+    <script src="bundle.js"></script>
+  </body>
+</html>

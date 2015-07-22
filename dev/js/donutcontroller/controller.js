@@ -1,9 +1,12 @@
 'use strict';
 
+console.log("load controller.js");
+
 module.exports = function(app) {
+  console.log("controller.js inside function");
   app.controller('appController', ['$scope', '$http', function($scope, $http) {
     var getAll = function(){
-      $http.get('/donutcontroller').success(function(response){
+      $http.get('/donuts').success(function(response){
         console.log(response);
         $scope.donuts = response;
       });
@@ -12,14 +15,14 @@ module.exports = function(app) {
 
     $scope.submitForm = function(donut) {
       console.log(setting);
-      $http.post('/donutcontroller', donut).success(function(response) {
+      $http.post('/donuts', donut).success(function(response) {
         getAll();
       });
     };
 
     $scope.destroy = function(id) {
       console.log(id);
-      $http.delete('/donutcontroller/' + id).success(function(response) {
+      $http.delete('/donuts/' + id).success(function(response) {
         getAll();
       });
     }
@@ -29,5 +32,5 @@ module.exports = function(app) {
       console.log(donut);
     };
 
-  }]);
+  }])};
 

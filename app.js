@@ -20,7 +20,7 @@ app.listen(port, function(){  //on port 3000
 });
 
 //static services
-app.use(express.static(path.join(__dirname, 'dev'))); //serve everything inside public directory
+app.use(express.static(path.join(__dirname, 'build'))); //serve everything inside public directory
 
 require('./routes/routes');//(settingsRouter);
 app.use('/', settingsRouter);
