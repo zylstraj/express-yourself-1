@@ -1,6 +1,6 @@
 'use strict';
 
-console.log("WHAT load client.js");
+console.log("load client.js");
 
 require('angular/angular');
 

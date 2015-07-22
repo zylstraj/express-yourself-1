@@ -31,10 +31,23 @@
               <li>
                 Description: {{donut.description}}
               </li>
-
               <li>
-                <button data-ng-click="edit(donut)">Edit</button>
-                <button data-ng-click="destroy(donut._id)">Delete</button>
+              <section class="update-form" data-ng-if="donut.editing" data-ng-submit="submitForm(donut)">
+
+                <h3>Edit Donut</h3>
+                <form id="update_donut">
+                  <input type="text" name="updatename" placeholder="Day" data-ng-model="donut.day"/>
+                  <input type="text" name="updateflavor" placeholder="Flavor" data-ng-model="donut.flavor"/>
+                  <input type="text" name="updatedescription" placeholder="Description" data-ng-model="donut.description"/>
+                  <button data-ng-click="edit(donut)">Save</button>
+                  <button data-ng-click="donut.editing=false">Cancel</button>
+
+                </form>
+              </section>
+
+                <button data-ng-if="!donut.editing" data-ng-click="donut.editing=true">Edit</button>
+
+                <button data-ng-if="!donut.editing" data-ng-click="destroy(donut._id)">Delete</button>
               </li>
             </ul>
           </li>
@@ -47,9 +60,20 @@
             <input type="text" name="name" placeholder="Day" data-ng-model="donut.day"/>
             <input type="text" name="flavor" placeholder="Flavor" data-ng-model="donut.flavor"/>
             <input type="text" name="description" placeholder="Description" data-ng-model="donut.description"/>
+
+        <section class="donut-form" data-ng-submit="submitForm(newdonut)">
+          <h3>Add a new donut special</h3>
+          <form id="new_donut">
+            <input type="text" name="name" placeholder="Day" data-ng-model="newdonut.day"/>
+            <input type="text" name="flavor" placeholder="Flavor" data-ng-model="newdonut.flavor"/>
+            <input type="text" name="description" placeholder="Description" data-ng-model="newdonut.description"/>
+
             <input type="Submit"/>
           </form>
         </section>
+
+
+
       </div>
     </main>
     <script src="bundle.js"></script>

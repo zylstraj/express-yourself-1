@@ -7,7 +7,7 @@ module.exports = function(app) {
   app.controller('appController', ['$scope', '$http', function($scope, $http) {
     var getAll = function(){
       $http.get('/donuts').success(function(response){
-        console.log(response);
+        console.log("inside getall", response);
         $scope.donuts = response;
       });
     };
@@ -28,12 +28,14 @@ module.exports = function(app) {
     }
 
     $scope.edit = function(donut) {
-      donut.editing = true;
+      donut.editing = false;
       console.log(donut);
-      $http.put('/donuts/' + donut._id, donut).success(function(response) {
+
+      $http.put('/donuts/' + donut._id, donut).success(function(response){
         getAll();
       });
-    }
+
+    };
 
   }])};
 
