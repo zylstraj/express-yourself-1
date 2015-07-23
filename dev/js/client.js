@@ -7,8 +7,12 @@ require('angular/angular');
 console.log("after ang require");
 
 var donutApp = angular.module('donutApp', []);
+console.log("donuts hmmm");
+//services
+require('./services/resourceService')(donutApp);
+console.log("after services require");
+//controllers
+require('./donuts/donuts')(donutApp);
 
-console.log("donutApp", donutApp);
-
-
-require('./donutcontroller/controller.js')(donutApp);
+//directives
+require('./directives/primeDirective')(donutApp);
