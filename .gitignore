@@ -42,3 +42,7 @@ sftp-config*
 *.sublime-*
 
 node_modules
+.sass-cache
+data
+obsolete
+

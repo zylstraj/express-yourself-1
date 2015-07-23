@@ -1,0 +1,17 @@
+var port = 3000;
+var app = require('../app');
+
+//app listener
+app.listen(port, function(){  //on port 3000
+   console.log("my awesome server is running on port: " + port);
+ });
+
+
+var debug = require('debug')('settings-manager');
+var app = require('../app');
+
+app.set('port', process.env.PORT || 3000);
+
+var server = app.listen(app.get('port'), function() {
+  debug('Express server listening on port ' + server.address().port);
+});
